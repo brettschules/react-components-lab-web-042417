@@ -1,6 +1,48 @@
 // Make sure to import React and ReactDOM
 import React from 'react'
-import ReactDOM from 'react-dom'
+
+class OlderCoaster extends React.Component {
+  render() {
+    return(
+      <div class="oldercoaster">
+  <p>Two grannies having the time of their life!</p>
+  <p>Passengers:</p>
+  <ul>
+    <li>Agnes</li>
+    <li>Muriel</li>
+  </ul>
+</div>
+
+    )
+  }
+}
+class InFrontOfYou extends React.Component {
+  render() {
+    return(
+      <div>
+  <p>You shouldn't look too far.</p>
+  <p>Sometimes, the solution is right in front of you.</p>
+</div>
+    )
+  }
+}
+
+class ButcherShop extends React.Component {
+  render() {
+    return(
+      <div class="butcher-shop">
+  <p>Hello! We have the following products for sale today:</p>
+  <ul>
+    <li>Tenderloin</li>
+    <li>Short ribs</li>
+    <li>Beef shin</li>
+    <li>Ribeye</li>
+  </ul>
+</div>
+    )
+  }
+
+}
 const BUTCHER_PRODUCTS = [
   'Tenderloin',
   'Short ribs',
@@ -9,43 +51,9 @@ const BUTCHER_PRODUCTS = [
 ];
 
 // Define these exported classes
-export default class OlderCoaster extends React.Component {
-  render{
-    return(
-      <div className="oldercoaster">
-      <p>Two grannies having the time of their life!</p>
-      <p>Passengers:</p>
-      <ul>
-        <li>Agnes</li>
-        <li>Muriel</li>
-      </ul>
-    </div>
-    )
-  }
-};
-export default class InFrontOfYou extends React.Component {
-  render{
-    return(
-      <div>
-      <p>You shouldn't look too far.</p>
-      <p>Sometimes, the solution is right in front of you.</p>
-    </div>
-    )
-  }
-};
-export default class ButcherShop extends React.Component {
-  render{
-    return(
-      <div className="butcher-shop">
-      <p>Hello! We have the following products for sale today:</p>
-      <ul> {BUTCHER_PRODUCTS.map(b =>
-        <li>T{b}</li>
-      )}
-      </ul>
-    </div>
-    )
-  }
-};
+export class OlderCoaster extends React.Component {};
+export class InFrontOfYou extends React.Component {};
+export class ButcherShop extends React.Component {};
 
 ReactDOM.render(
   React.createElement('div', {}, [
